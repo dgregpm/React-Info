@@ -5,7 +5,7 @@ import App from './App';
 import logo from './logo.svg'
 import reportWebVitals from './reportWebVitals';
 
-function Page() {
+function PageOld() {
   return (
   <div>
       <img src={logo} width="100px" alt="react logo"/>
@@ -18,37 +18,57 @@ function Page() {
           <li>Powers thousands of enterprise apps, including mobile apps</li>
       </ul>
   </div>
-);
-  }
+  );
+}
 
-function PageHeader() {
+function Header() {
   return (
-    <div>
+
     <header>
       <nav>
         <img src={logo} width="100px" alt="logo" />
       </nav>
     </header>
-    <h1>Reasons I'm excited to learn React</h1>
+  );
+}
+
+function Page() {
+  return (
+    <div>
+      <Header />    
+      <MainContent />
+      <Footer />
+    </div>
+  );
+}
+
+function MainContent() {
+  return (
+    <div>
+      <h1>Reasons I'm excited to learn React</h1>
     <ol>
         <li>It's a popular library, so I'll be 
         able to fit in with the cool kids!</li>
         <li>I'm more likely to get a job as a developer
         if I know React</li>
     </ol>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
     <footer>
       <p>© 2022 Dickson development. All rights reserved.</p>
     </footer>
-    </div>
-  )
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    {/* <Page /> */}
-    <PageHeader />
+    <Page />
   </React.StrictMode>
 );
 
