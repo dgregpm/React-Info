@@ -1,44 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import logo from './logo.svg'
 import reportWebVitals from './reportWebVitals';
-import Header from'./Header';
-import MainContent from './MainContent';
-import Footer from './Footer';
-
-// function PageOld() {
-//   return (
-//   <div>
-//       <img width="100px" src={logo} alt="react logo"/>
-//       <h1>Fun facts about React</h1>
-//       <ul>
-//           <li>Was first released in 2013</li>
-//           <li>Was originally created by Jordan Walke</li>
-//           <li>Has well over 100k stars on Github</li>
-//           <li>Is maintained by Facebook</li>
-//           <li>Powers thousands of enterprise apps, including mobile apps</li>
-//       </ul>
-//   </div>
-//   );
-// }
-
-function Page() {
-  return (
-    <div>
-      <Header />    
-      <MainContent />
-      <Footer />
-    </div>
-  );
-}
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Page />
+    <App />
   </React.StrictMode>
 );
 
